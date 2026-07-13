@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CotiClass — Nouveau paiement</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','ui-sans-serif','system-ui']}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="font-sans bg-gray-50 text-gray-900 min-h-screen pb-16 md:pb-0">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-20 bg-white border-b border-gray-200 px-4 md:px-8 h-14 flex items-center justify-between">
+  <div class="flex items-center gap-2">
+    <div class="w-7 h-7 rounded-lg bg-gray-900 text-white flex items-center justify-center font-bold text-xs">C</div>
+    <span class="font-semibold hidden sm:block">CotiClass</span>
+    <span class="text-gray-300 hidden md:block">/</span>
+    <span class="text-gray-500 text-sm hidden md:block">Nouveau paiement</span>
+  </div>
+  <div class="w-8 h-8 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs font-semibold">FM</div>
+</header>
+
+<div class="md:flex">
+  <!-- SIDEBAR -->
+  <aside class="hidden md:flex md:flex-col md:w-56 md:shrink-0 border-r border-gray-200 min-h-[calc(100vh-56px)] p-4 gap-1">
+    <a href="gerant-dashboard.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><path d="M3 11l9-7 9 7"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>Vue d'ensemble</a>
+    <a href="gerant-suivi.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Suivi hebdomadaire</a>
+    <a href="gerant-paiement.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v10a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-3"/><path d="M16 12h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a2 2 0 0 1 0-4z"/></svg>Paiements</a>
+    <a href="gerant-campagnes.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><path d="M3 11v2a2 2 0 0 0 2 2h1l3 5V6l-3 5H5a2 2 0 0 0-2 2z"/><path d="M13 8a4 4 0 0 1 0 8"/></svg>Campagnes</a>
+    <a href="gerant-apprenants.html" class="nav-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><circle cx="17" cy="9" r="2.5"/><path d="M22 20c0-2.6-2-4.8-4.7-5.6"/></svg>Apprenants</a>
+    <div class="flex-1"></div>
+    <a href="index.html" class="nav-link text-gray-400"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><path d="M9 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"/><path d="M15 16l4-4-4-4"/><path d="M19 12H9"/></svg>Déconnexion</a>
+  </aside>
+
+  <!-- CONTENU -->
+  <main class="flex-1 p-4 md:p-8 max-w-lg">
+    <h1 class="text-xl font-semibold mb-1">Nouveau paiement</h1>
+    <p class="text-sm text-gray-500 mb-6">Saisie déclarative — enregistrez un versement après réception des fonds.</p>
+
+    <form class="card p-5 space-y-4">
+      <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">Apprenant</label>
+        <select class="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-sm bg-white">
+          <option>Sélectionner un étudiant</option>
+          <option>Alexandre Dupont</option>
+          <option>Marie-Claire Lefebvre</option>
+          <option>Julien Martin</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-xs font-medium text-gray-600 mb-2">Cible du paiement</label>
+        <div class="grid grid-cols-3 gap-2 text-xs">
+          <button type="button" class="border-2 border-gray-900 rounded-lg py-2 font-medium">Semaine(s)</button>
+          <button type="button" class="border border-gray-200 rounded-lg py-2 text-gray-500">Anniversaire</button>
+          <button type="button" class="border border-gray-200 rounded-lg py-2 text-gray-500">Don libre</button>
+        </div>
+        <p class="text-xs text-gray-400 mt-2">Un versement multi-semaines est ventilé automatiquement sur les semaines non payées les plus anciennes.</p>
+      </div>
+
+      <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">Montant (FCFA)</label>
+        <input type="number" placeholder="Ex : 5000" class="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-sm">
+      </div>
+
+      <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">Note (optionnel)</label>
+        <textarea rows="3" placeholder="Précisions sur le versement…" class="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-sm resize-none"></textarea>
+      </div>
+
+      <button type="button" onclick="location.href='gerant-suivi.html'" class="w-full bg-gray-900 text-white rounded-lg py-2.5 text-sm font-medium hover:bg-gray-800">Valider le paiement</button>
+    </form>
+
+    <div class="card mt-4 p-4">
+      <p class="text-xs font-medium text-gray-500 mb-2">Collecte du jour</p>
+      <p class="text-2xl font-semibold">12 000 FCFA</p>
+      <p class="text-xs text-gray-400 mt-1">4 transactions traitées</p>
+    </div>
+  </main>
+</div>
+
+<!-- NAVBOTTOM -->
+<nav class="md:hidden fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 flex z-20">
+  <a href="gerant-dashboard.html" class="tab-mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><path d="M3 11l9-7 9 7"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>Accueil</a>
+  <a href="gerant-suivi.html" class="tab-mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Suivi</a>
+  <a href="gerant-paiement.html" class="tab-mobile active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v10a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-3"/><path d="M16 12h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a2 2 0 0 1 0-4z"/></svg>Paiement</a>
+  <a href="gerant-campagnes.html" class="tab-mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><path d="M3 11v2a2 2 0 0 0 2 2h1l3 5V6l-3 5H5a2 2 0 0 0-2 2z"/><path d="M13 8a4 4 0 0 1 0 8"/></svg>Campagnes</a>
+  <a href="gerant-apprenants.html" class="tab-mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><circle cx="17" cy="9" r="2.5"/><path d="M22 20c0-2.6-2-4.8-4.7-5.6"/></svg>Classe</a>
+</nav>
+</body>
+</html>

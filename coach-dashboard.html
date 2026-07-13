@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CotiClass — Supervision Coach</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','ui-sans-serif','system-ui']}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="font-sans bg-gray-50 text-gray-900 min-h-screen pb-16 md:pb-0">
+
+<header class="sticky top-0 z-20 bg-white border-b border-gray-200 px-4 md:px-8 h-14 flex items-center justify-between">
+  <div class="flex items-center gap-2">
+    <div class="w-7 h-7 rounded-lg bg-gray-900 text-white flex items-center justify-center font-bold text-xs">C</div>
+    <span class="font-semibold hidden sm:block">CotiClass</span>
+    <span class="text-gray-300 hidden md:block">/</span>
+    <span class="text-gray-500 text-sm hidden md:block">Supervision</span>
+  </div>
+  <span class="badge badge-gray hidden sm:inline-block">Lecture seule</span>
+</header>
+
+<div class="md:flex">
+  <aside class="hidden md:flex md:flex-col md:w-56 md:shrink-0 border-r border-gray-200 min-h-[calc(100vh-56px)] p-4 gap-1">
+    <a href="coach-dashboard.html" class="nav-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Supervision</a>
+    <div class="flex-1"></div>
+    <a href="index.html" class="nav-link text-gray-400"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><path d="M9 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"/><path d="M15 16l4-4-4-4"/><path d="M19 12H9"/></svg>Déconnexion</a>
+  </aside>
+
+  <main class="flex-1 p-4 md:p-8 max-w-5xl">
+    <div class="flex items-center justify-between mb-1">
+      <div>
+        <h1 class="text-xl font-semibold">Supervision Coach</h1>
+        <p class="text-sm text-gray-500">Audit en lecture seule · Promotion Data & IA</p>
+      </div>
+      <button class="hidden sm:flex items-center gap-1.5 border border-gray-200 text-sm font-medium px-3 py-2 rounded-lg text-gray-500 cursor-not-allowed" title="Lecture seule — action désactivée">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-4 h-4"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Export (audit)
+      </button>
+    </div>
+
+    <div class="relative my-5 max-w-xs">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+      <input type="text" placeholder="Rechercher un étudiant…" class="w-full pl-9 pr-3 py-2 rounded-lg border border-gray-200 text-sm bg-white">
+    </div>
+
+    <div class="grid grid-cols-2 gap-3 mb-6">
+      <div class="card p-4">
+        <p class="text-xs text-gray-500 mb-1">Total étudiants</p>
+        <p class="text-2xl font-semibold">42</p>
+      </div>
+      <div class="card p-4">
+        <p class="text-xs text-gray-500 mb-1">En retard</p>
+        <p class="text-2xl font-semibold text-red-600">08</p>
+      </div>
+    </div>
+
+    <div class="card p-4 mb-6">
+      <div class="flex justify-between text-xs text-gray-500 mb-2">
+        <span>Taux de recouvrement global</span><span>81 %</span>
+      </div>
+      <div class="h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-gray-900 rounded-full" style="width:81%"></div></div>
+    </div>
+
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="font-medium text-sm">Liste des étudiants</h2>
+      <span class="text-xs text-gray-400">Trésorerie collectée : 87 500 F</span>
+    </div>
+    <div class="card divide-y divide-gray-50">
+      <div class="p-4 flex justify-between items-center">
+        <div><p class="font-medium text-sm">Alexandre Dupont</p><p class="text-xs text-gray-500">Promotion 2024</p></div>
+        <span class="badge badge-green">À jour</span>
+      </div>
+      <div class="p-4 flex justify-between items-center">
+        <div><p class="font-medium text-sm">Marie-Claire Lefebvre</p><p class="text-xs text-gray-500">Promotion 2023</p></div>
+        <span class="badge badge-red">En retard</span>
+      </div>
+      <div class="p-4 flex justify-between items-center">
+        <div><p class="font-medium text-sm">Julien Martin</p><p class="text-xs text-gray-500">Promotion 2024</p></div>
+        <span class="badge badge-green">À jour</span>
+      </div>
+      <div class="p-4 flex justify-between items-center">
+        <div><p class="font-medium text-sm">Sarah Bernard</p><p class="text-xs text-gray-500">Promotion 2024</p></div>
+        <span class="badge badge-red">En retard</span>
+      </div>
+      <div class="p-4 flex justify-between items-center">
+        <div><p class="font-medium text-sm">Thomas Petit</p><p class="text-xs text-gray-500">Promotion 2024</p></div>
+        <span class="badge badge-green">À jour</span>
+      </div>
+      <div class="p-4 flex justify-between items-center">
+        <div><p class="font-medium text-sm">Sophie Girard</p><p class="text-xs text-gray-500">Promotion 2023</p></div>
+        <span class="badge badge-green">À jour</span>
+      </div>
+    </div>
+  </main>
+</div>
+
+<nav class="md:hidden fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 flex z-20">
+  <a href="coach-dashboard.html" class="tab-mobile active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Supervision</a>
+  <a href="index.html" class="tab-mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><path d="M9 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"/><path d="M15 16l4-4-4-4"/><path d="M19 12H9"/></svg>Sortir</a>
+</nav>
+</body>
+</html>
