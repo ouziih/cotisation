@@ -1,10 +1,11 @@
 <?php
 
-$page = isset($_GET['page']) ? $_GET['page'] : '/login';
+$uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/login';
+
 
 $routes = [
 
-    '/inscription' => [
+        '/apprenant/inscription' => [
             'controller' => '../app/controllers/AuthController.php',
             'action' => 'inscription'
         ],
@@ -12,16 +13,24 @@ $routes = [
             'controller' => '../app/controllers/AuthController.php',
             'action' => 'login'
         ],
-        '/apprenant/dashboard ' => [
+        '/logout' => [
+            'controller' => '../app/controllers/AuthController.php',
+            'action' => 'logout'
+        ],
+        '/apprenant/dashboard' => [
             'controller' => '../app/controllers/ApprenantController.php',
+            'action' => 'dashboard'
+        ],
+        '/gerant/dashboard' => [
+            'controller' => '../app/controllers/GerantController.php',
             'action' => 'dashboard'
         ]
     
 ];
 
-if (isset($routes[$page])) {
-    require_once $routes[$page]['controller'];
-    $function = $routes[$page]['action'];
+if (isset($routes[$uri])) {
+    require_once $routes[$uri]['controller'];
+    $function = $routes[$uri]['action'];
     $function();
 } else {
     echo "404 - Page non trouvée";

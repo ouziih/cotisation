@@ -28,7 +28,7 @@
 
   <!-- Formulaire -->
   <div class="flex-1 flex items-center justify-center p-6">
-    <form class="w-full max-w-sm">
+    <form class="w-full max-w-sm" action="http://ousmane.samba.odc.edu.sn/login" method="POST">
       <div class="lg:hidden flex items-center gap-2 mb-8 justify-center">
         <div class="w-8 h-8 rounded-lg bg-gray-900 text-white flex items-center justify-center font-bold text-sm">C</div>
         <span class="font-semibold text-lg">CotiClass</span>
@@ -38,17 +38,17 @@
       <p class="text-sm text-gray-500 mb-6">Accédez à votre espace CotiClass.</p>
 
       <label class="block text-xs font-medium text-gray-600 mb-1">Identifiant</label>
-      <input type="text" placeholder="votre nom d'utilisateur" class="w-full mb-4 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-400">
+      <input type="text" name="email" placeholder="votre nom d'utilisateur" class="w-full mb-4 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-400">
 
       <label class="block text-xs font-medium text-gray-600 mb-1">Mot de passe</label>
-      <input type="password" placeholder="••••••••" class="w-full mb-2 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-400">
+      <input type="password" name="password" placeholder="••••••••" class="w-full mb-2 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-400">
       <div class="flex justify-end mb-5">
         <a href="#" class="text-xs text-gray-500 hover:text-gray-900">Mot de passe oublié ?</a>
       </div>
 
-      <button type="button" onclick="location.href='gerant-dashboard.html'" class="w-full bg-gray-900 text-white rounded-lg py-2.5 text-sm font-medium hover:bg-gray-800 transition">Se connecter</button>
+      <button type="submit" class="w-full bg-gray-900 text-white rounded-lg py-2.5 text-sm font-medium hover:bg-gray-800 transition">Se connecter</button>
 
-      <p class="text-center text-sm text-gray-500 mt-5">Nouveau sur CotiClass ? <a href="inscription.html" class="text-gray-900 font-medium">Créer un compte</a></p>
+      <p class="text-center text-sm text-gray-500 mt-5">Nouveau sur CotiClass ? <a href="http://ousmane.samba.odc.edu.sn/apprenant/inscription" class="text-gray-900 font-medium">Créer un compte</a></p>
 
     </form>
   </div>
