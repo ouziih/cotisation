@@ -50,11 +50,6 @@
 
       <p class="text-center text-sm text-gray-500 mt-5">Nouveau sur CotiClass ? <a href="inscription.html" class="text-gray-900 font-medium">Créer un compte</a></p>
 
-      <div class="mt-8 pt-5 border-t border-gray-100 flex justify-center gap-3 text-xs text-gray-400">
-        <a href="gerant-dashboard.html" class="hover:text-gray-700">Demo Gérant</a>·
-        <a href="apprenant-dashboard.html" class="hover:text-gray-700">Demo Apprenant</a>·
-        <a href="coach-dashboard.html" class="hover:text-gray-700">Demo Coach</a>
-      </div>
     </form>
   </div>
 </body>
