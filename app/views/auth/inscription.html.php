@@ -25,7 +25,7 @@
   </div>
 
   <div class="flex-1 flex items-center justify-center p-6">
-    <form class="w-full max-w-sm">
+    <form method = "POST" action = "http://ousmane.samba.odc.edu.sn/apprenant/inscription" class="w-full max-w-sm">
       <div class="lg:hidden flex items-center gap-2 mb-8 justify-center">
         <div class="w-8 h-8 rounded-lg bg-gray-900 text-white flex items-center justify-center font-bold text-sm">C</div>
         <span class="font-semibold text-lg">CotiClass</span>
@@ -35,31 +35,31 @@
       <p class="text-sm text-gray-500 mb-6">Créez votre compte CotiClass. Un utilisateur peut cumuler jusqu'à 2 rôles (ex. Gérant, qui reste aussi Apprenant).</p>
 
       <label class="block text-xs font-medium text-gray-600 mb-1">Nom complet</label>
-      <input type="text" placeholder="Jean-Pierre Dupont" class="w-full mb-4 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-400">
+      <input name="nomComplet" type="text" placeholder="Jean-Pierre Dupont" class="w-full mb-4 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-400">
 
       <label class="block text-xs font-medium text-gray-600 mb-1">Email</label>
-      <input type="email" placeholder="votre.nom@etudiant.fr" class="w-full mb-4 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-400">
+      <input name="email" type="email" placeholder="votre.nom@etudiant.fr" class="w-full mb-4 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-400">
 
       <label class="block text-xs font-medium text-gray-600 mb-2">Rôle(s) — 1 à 2 maximum</label>
       <div class="grid grid-cols-3 gap-2 mb-4 text-xs">
         <label id="role-apprenant" class="flex flex-col items-center gap-1.5 border-2 border-gray-900 rounded-lg py-2.5 cursor-pointer font-medium">
-          <input type="checkbox" checked onchange="toggleRole('role-apprenant', this)" class="accent-gray-900"> Apprenant
+          <input name="roles[]" value="apprenant" type="checkbox" checked onchange="toggleRole('role-apprenant', this)" class="accent-gray-900"> Apprenant
         </label>
         <label id="role-gerant" class="flex flex-col items-center gap-1.5 border border-gray-200 rounded-lg py-2.5 cursor-pointer text-gray-500">
-          <input type="checkbox" onchange="toggleRole('role-gerant', this)" class="accent-gray-900"> Gérant
+          <input name="roles[]" type="checkbox" value="gerant" onchange="toggleRole('role-gerant', this)" class="accent-gray-900"> Gérant
         </label>
       </div>
       <p class="text-xs text-gray-400 -mt-2 mb-4">Le rôle "Apprenant" est coché par défaut : tout compte reste rattaché à une cotisation, même un Gérant.</p>
 
       <label class="block text-xs font-medium text-gray-600 mb-1">Mot de passe</label>
-      <input type="password" placeholder="••••••••" class="w-full mb-4 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-400">
+      <input name="password" type="password" placeholder="••••••••" class="w-full mb-4 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-400">
 
       <label class="block text-xs font-medium text-gray-600 mb-1">Confirmer le mot de passe</label>
-      <input type="password" placeholder="••••••••" class="w-full mb-5 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-400">
+      <input type="password" name="confirmPassword" placeholder="••••••••" class="w-full mb-5 rounded-lg border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-400">
 
-      <button type="button" class="w-full bg-gray-900 text-white rounded-lg py-2.5 text-sm font-medium hover:bg-gray-800 transition">S'inscrire</button>
+      <button type="submit" class="w-full bg-gray-900 text-white rounded-lg py-2.5 text-sm font-medium hover:bg-gray-800 transition">S'inscrire</button>
 
-      <p class="text-center text-sm text-gray-500 mt-5">Vous avez déjà un compte ? <a href="connexion.html" class="text-gray-900 font-medium">Se connecter</a></p>
+      <p class="text-center text-sm text-gray-500 mt-5">Vous avez déjà un compte ? <a href="http://ousmane.samba.odc.edu.sn/login" class="text-gray-900 font-medium">Se connecter</a></p>
     </form>
   </div>
 

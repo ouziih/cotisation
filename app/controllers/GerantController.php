@@ -1,2 +1,5 @@
 <?php
-require_once(dirname(__DIR__) . "/models/UtilisateurModel.php");
+
+function dashboard():void{
+     echo "dashboard gerant";
+}

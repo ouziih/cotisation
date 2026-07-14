@@ -3,7 +3,7 @@
 function required(string $key ,string $champ,array &$errors):void{
     if($champ === "")
         {
-            $errors[$key]["required"]="ce champ est oubligatoire";   
+            $errors[$key]["required"]="le $champ est oubligatoire";   
         }
 }
 
