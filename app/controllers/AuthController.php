@@ -82,7 +82,7 @@ function inscription():void{
                 $utilisateur = utilisateur($nomComplet, $email, $password, $roles);
                 saveUtilisateur($utilisateur, $utilisateurs);
                 saveData("utilisateurs", $utilisateurs);
-                saveData("succes", "compte créé avec succès");
+                save("succes", "compte créé avec succès");
                 header("Location: http://ousmane.samba.odc.edu.sn/login");
                 exit();
             } else {
